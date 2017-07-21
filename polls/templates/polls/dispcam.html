@@ -1,0 +1,15 @@
+{% load static %}
+<head>
+<script src="{% static 'js/jquery.flot.js' %}"></script>
+</head>
+
+<h1>Image captured now</h1>
+<br>
+<br>
+
+<img src="{{MEDIA_URL}}image.jpg" alt="My image"/>
+{% for data in myname %}
+	<ul> {{data.sensor_name}}, {{data.create_date}}</ul>
+{%endfor%}
+
+barchart{{ bar_chart.as_html }}
